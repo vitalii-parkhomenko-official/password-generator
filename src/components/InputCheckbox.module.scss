@@ -1,0 +1,39 @@
+.root {
+  position: relative;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.root + * {
+  margin-top: 16px;
+}
+
+.check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 2px solid green;
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+.input:checked ~ .check {
+  background-color: green;
+}
+
+.input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.label {
+  margin-left: 16px;
+  padding-left: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
